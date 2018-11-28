@@ -1,0 +1,32 @@
+<html>
+<head>
+<!--
+  written by Eric Ingamells
+  December, 2011
+  Graphics library obtained from http://raphaeljs.com/
+-->
+<title>ScorFor with JavaScript</title>
+<script type="text/javascript" src="scorfor.js"></script>
+<script type="text/javascript" src="raphael-min.js"></script>
+</head>
+<body onload="Start()">
+<center>
+<span name="field" id="field" height="550" width="850" onclick="buttonClick(event)" style="cursor:pointer;display: inline-block"></span>
+<table width="600 px"><tr>
+  <td align="left"><input type="button" value="New Game" onclick="SetupField()" /></td>
+  <td align="center">First Move: <select id="firstmove">
+    <option value="1">White</option>
+    <option value="0">Black</option>
+    <option value="2" selected="selected">Alternate</option>
+    </select></td>
+  <td align="center">Show Peg Numbers: <select id="numbers" onchange="ShowNumbers()">
+    <option value="0">Top</option>
+    <option value="1">Bottom</option>
+    <option value="2" selected="selected">Both</option>
+    <option value="3">None</option>
+    </select></td>
+</tr></table>
+<span id="Errors"></span>
+</center>
+</body>
+</html>
